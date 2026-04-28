@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Kasa",
+    "category": "Application de location immobilière",
+    "description": "Plateforme de location entre particuliers développée avec React et React Router. Architecture composants, animations fluides et styling Sass selon une charte graphique stricte.",
+    "tags": ["React", "React Router", "Sass"],
+    "alt": "Aperçu du projet Kasa, application de location immobilière"
+  },
+  {
+    "title": "Nina Carducci",
+    "category": "Audit SEO & Accessibilité",
+    "description": "Optimisation complète d'un site portfolio photographe : performances Lighthouse, balisage sémantique, données structurées Schema.org et conformité WCAG.",
+    "tags": ["Audit", "Performance", "Lighthouse"],
+    "alt": "Aperçu du projet d'optimisation SEO Nina Carducci"
+  }
+]
