@@ -1,16 +1,69 @@
 [
   {
     "title": "Kasa",
+    "themeClass": "kasa-theme",
     "category": "Application de location immobilière",
     "description": "Plateforme de location entre particuliers développée avec React et React Router. Architecture composants, animations fluides et styling Sass selon une charte graphique stricte.",
     "tags": ["React", "React Router", "Sass"],
-    "alt": "Aperçu du projet Kasa, application de location immobilière"
+    "alt": "Aperçu du projet Kasa, application de location immobilière",
+    "cover": "assets/kasa-mockup.webp",
+    "context": "Refonte complète du front-end de l'application de location Kasa. Migration depuis une stack legacy vers une SPA React moderne, en respectant une maquette Figma stricte.",
+    "objectifs": [
+      "Développer une SPA performante avec React Router",
+      "Mettre en place des composants réutilisables",
+      "Respecter strictement les maquettes Figma"
+    ],
+    "competences": [
+      "Configuration de la navigation avec React Router",
+      "Développement de composants (Carousel, Collapse)",
+      "Mise en œuvre d'une organisation CSS avec Sass"
+    ],
+    "livrables": [
+      "SPA livrée conforme aux maquettes desktop et mobile",
+      "Navigation fluide sans rechargement de page"
+    ],
+    "perspectives": [
+      "Brancher une API REST pour remplacer le JSON statique",
+      "Ajouter des tests unitaires"
+    ],
+    "siteLive": "https://projet-5-kasa-one.vercel.app/",
+    "github": "https://github.com/MCDelap/Projet_5_Kasa"
   },
+
   {
     "title": "Nina Carducci",
+    "themeClass": "nina-theme",
     "category": "Audit SEO & Accessibilité",
     "description": "Optimisation complète d'un site portfolio photographe : performances Lighthouse, balisage sémantique, données structurées Schema.org et conformité WCAG.",
+    "lighthouseScores": {
+    "performance": 97,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "seo": 100
+  },
     "tags": ["Audit", "Performance", "Lighthouse"],
-    "alt": "Aperçu du projet d'optimisation SEO Nina Carducci"
+    "alt": "Aperçu du projet d'optimisation SEO Nina Carducci",
+    "cover": "/assets/nina-mockup.webp",
+    "context": "Optimisation globale du site d'une photographe professionnelle pour améliorer sa visibilité locale et la vitesse de chargement sur mobile.",
+    "objectifs": [
+      "Améliorer les scores Lighthouse (Performance, SEO, Accessibilité)",
+      "Optimiser le poids des images du portfolio",
+      "Corriger les problèmes d'accessibilité WCAG"
+    ],
+    "competences": [
+      "Utilisation avancée de Chrome DevTools et Lighthouse",
+      "Techniques de compression et formats d'images modernes (WebP)",
+      "Intégration de microdonnées Schema.org pour le SEO local"
+    ],
+    "livrables": [
+      "Rapport d'audit SEO avant/après avec gains mesurables",
+      "Code source optimisé et validé par le W3C"
+    ],
+    "perspectives": [
+      "Mettre en place un outil de suivi des positions Google",
+      "Ajouter un système de lazy-loading plus agressif"
+    ],
+    "siteLive": "https://mcdelap.github.io/Projet_4_Nina_Carducci/",
+    "github": "https://github.com/MCDelap/Projet_4_Nina_Carducci"
   }
 ]
