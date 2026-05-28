@@ -23,8 +23,8 @@
       "Navigation fluide sans rechargement de page"
     ],
     "perspectives": [
-      "Brancher une API REST pour remplacer le JSON statique",
-      "Ajouter des tests unitaires"
+      "Connecter une API pour gérer les données en temps réel",
+      "Ajouter des tests automatiques pour sécuriser le code"
     ],
     "siteLive": "https://projet-5-kasa-one.vercel.app/",
     "github": "https://github.com/MCDelap/Projet_5_Kasa"
@@ -36,11 +36,11 @@
     "category": "Audit SEO & Accessibilité",
     "description": "Optimisation complète d'un site portfolio photographe : performances Lighthouse, balisage sémantique, données structurées Schema.org et conformité WCAG.",
     "lighthouseScores": {
-    "performance": 97,
-    "accessibility": 100,
-    "bestPractices": 100,
-    "seo": 100
-  },
+      "performance": 97,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100
+    },
     "tags": ["Audit", "Performance", "Lighthouse"],
     "alt": "Aperçu du projet d'optimisation SEO Nina Carducci",
     "cover": "/assets/nina-mockup.webp",
@@ -60,8 +60,8 @@
       "Code source optimisé et validé par le W3C"
     ],
     "perspectives": [
-      "Mettre en place un outil de suivi des positions Google",
-      "Ajouter un système de lazy-loading plus agressif"
+      "Suivre le classement du site sur Google",
+      "Optimiser encore plus le chargement des images"
     ],
     "siteLive": "https://mcdelap.github.io/Projet_4_Nina_Carducci/",
     "github": "https://github.com/MCDelap/Projet_4_Nina_Carducci"
