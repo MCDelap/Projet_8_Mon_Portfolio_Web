@@ -8,7 +8,7 @@ function Hero() {
         <span className="section-label">Bienvenue sur mon portfolio</span>
 
         <h1 className="hero__title">
-          Bonjour, je suis <span className="hero__name">Marie-Claire Delaplanche</span>
+          Bonjour, je suis <span className="hero__name">M-Claire Delaplanche</span>
         </h1>
 
         <h2 className="hero__subtitle">Développeuse Web Junior</h2>
