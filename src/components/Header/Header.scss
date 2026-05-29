@@ -1,0 +1,130 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $bg-light;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 100;
+  padding: 15px 0;
+
+  &__container {
+    @include container-main;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__burger-btn,
+  &__close-btn {
+    display: none;
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      list-style: none;
+      gap: 35px;
+    }
+    &-link {
+      text-decoration: none;
+      color: $primary-blue;
+      font-family: $font-body;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $accent-orange;
+      }
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn-contact {
+    @include button-base;
+    background-color: $primary-blue;
+    color: $white;
+    padding: 10px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: $font-body;
+    font-weight: 600;
+    transition:
+      transform 0.3s ease,
+      background-color 0.3s ease;
+
+    &:hover {
+      background-color: $accent-orange;
+      transform: translateY(-2px);
+    }
+  }
+
+  // ==========================================
+  // --- RESPONSIVE MOBILE ---
+  // ==========================================
+  @media (max-width: 768px) {
+    &__burger-btn,
+    &__close-btn {
+      display: flex;
+      background: transparent;
+      border: none;
+      padding: 4px;
+      color: $primary-blue;
+      font-size: 26px;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        color: $accent-orange;
+      }
+    }
+    &__close-btn {
+      margin-left: auto;
+      &:hover {
+        transform: scale(1.05);
+        color: $accent-orange;
+      }
+    }
+
+    // Cache la liste de liens par défaut
+    &__nav {
+      display: none;
+      width: 100%;
+      margin-top: 20px;
+      order: 2;
+
+      &.is-open {
+        display: block;
+      }
+
+      &-list {
+        flex-direction: column;
+        gap: 20px;
+        text-align: left;
+      }
+      &-link {
+        display: block;
+        width: 100%;
+        padding: 4px 0;
+
+        &:hover {
+          color: $accent-orange;
+        }
+      }
+    }
+
+    &__btn-contact {
+      padding: 6px 14px;
+      font-size: 13px;
+    }
+  }
+}
