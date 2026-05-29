@@ -1,0 +1,312 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+/* --- STYLES GÉNÉRAUX DE LA MODALE --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+
+  z-index: 1000;
+  padding: 40px 32px;
+}
+
+.modal-content {
+  background-color: $bg-light;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  margin-bottom: 40px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 26px;
+  color: white;
+  z-index: 100;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* --- SECTION HERO (MOCKUP KASA) --- */
+.modal-hero {
+  padding: 40px 32px;
+  @include flex-center;
+  border-radius: 16px 16px 0 0;
+
+  // --- L'intégration des classes de thèmes ---
+  &.nina-theme {
+    background-color: $primary-blue;
+  }
+
+  &.kasa-theme {
+    background-color: $accent-orange;
+  }
+
+  .modal-mockup-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+}
+
+/* --- CORPS DE LA MODALE --- */
+.modal-body {
+  padding: 32px;
+
+  .project-subtitle {
+    color: $accent-orange;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .project-title {
+    color: $primary-blue;
+    font-size: 32px;
+    margin: 8px 0;
+  }
+
+  .project-description {
+    line-height: 1.6;
+    margin-bottom: 32px;
+    color: $text-dark;
+  }
+}
+
+/* --- LAYOUT FLEXBOX DES COLONNES --- */
+.modal-content-layout {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  .column-main {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 300px;
+  }
+
+  .column-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 250px;
+  }
+}
+
+/* --- STYLE DES CARTES D'INFORMATION --- */
+.project-card-info {
+  @include card-base;
+  padding: 24px;
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    .card-icon {
+      color: $accent-orange;
+      font-size: 20px;
+      display: flex;
+    }
+
+    h3 {
+      font-size: 16px;
+      color: $primary-blue;
+      margin: 0;
+    }
+
+    span {
+      font-size: 11px;
+      color: $text-dark;
+      opacity: 0.6;
+      font-weight: 700;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    color: $text-dark;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    li {
+      font-size: 14px;
+      display: flex;
+      gap: 8px;
+      color: $text-dark;
+
+      .bullet-icon {
+        display: flex;
+        align-items: center;
+        color: $text-dark;
+        margin-top: 3px;
+        font-size: 14px;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+/* --- BADGES/TAGS DE LA STACK --- */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* --- BARRE DE BOUTONS EN BAS --- */
+.modal-footer {
+  background: $white;
+  padding: 16px 32px;
+  border-top: 1px solid $bg-dark;
+  display: flex;
+  gap: 16px;
+
+  .btn {
+    flex: 1;
+    @include button-base;
+    gap: 8px;
+    font-size: 15px;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &.btn-live {
+      background-color: $accent-orange;
+      color: $white;
+    }
+
+    &.btn-github {
+      background-color: $primary-blue;
+      color: $white;
+    }
+  }
+}
+
+/* --- AJOUT DES SCORES LIGHTHOUSE --- */
+.lighthouse-card {
+  .lighthouse-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .lighthouse-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    flex: 1 1 40%;
+
+    span {
+      font-size: 12px;
+      font-weight: 600;
+      color: $text-dark;
+    }
+  }
+
+  // Cercle vert typique de Lighthouse pour les scores >= 90
+  .score-high {
+    .score-circle {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: 4px solid #00cc66;
+      background: rgba(0, 204, 102, 0.1);
+      color: #00aa55;
+      font-weight: 700;
+      font-size: 14px;
+      @include flex-center;
+    }
+  }
+}
+
+// ==========================================
+// --- RESPONSIVE MOBILE ---
+// ==========================================
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 16px 12px;
+  }
+
+  .modal-content {
+    margin-bottom: 0;
+  }
+
+  .modal-close-btn {
+    font-size: 18px;
+  }
+
+  .modal-hero {
+    padding: 32px 16px;
+  }
+
+  .modal-body {
+    padding: 24px 16px;
+
+    .project-title {
+      font-size: 24px;
+    }
+  }
+
+  .modal-content-layout {
+    gap: 20px;
+    .column-main,
+    .column-side {
+      min-width: 100%;
+    }
+  }
+
+  .modal-footer {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+}
