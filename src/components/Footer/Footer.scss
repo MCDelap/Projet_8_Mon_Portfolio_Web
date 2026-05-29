@@ -1,0 +1,33 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.footer {
+  background-color: $primary-blue;
+  color: $text-gray;
+  padding: 40px 0;
+  width: 100%;
+  margin-top: auto;
+
+  &__container {
+    @include container-main;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // ==========================================
+    // --- RESPONSIVE MOBILE ---
+    // ==========================================
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  }
+
+  &__copyright {
+    font-size: 13px;
+    line-height: 20px;
+    color: $text-gray;
+    margin: 0;
+  }
+}
