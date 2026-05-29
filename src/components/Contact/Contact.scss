@@ -1,0 +1,132 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.contact {
+  padding: 100px 0;
+  background-color: $bg-dark;
+  color: $primary-blue;
+
+  &__container {
+    @include container-main;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    @include section-description;
+    color: $text-dark;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 300px;
+  }
+
+  .info-card {
+    @include card-base;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      span {
+        font-size: 11px;
+        color: $text-dark;
+        opacity: 0.6;
+        font-weight: 700;
+      }
+      strong {
+        font-size: 16px;
+        color: $primary-blue;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+
+    .social-button {
+      @include card-base;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px;
+      text-decoration: none;
+      color: $primary-blue;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: $accent-orange;
+        color: $accent-orange;
+      }
+    }
+  }
+
+  &__form {
+    @include card-base;
+    flex: 1.5;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 320px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      label {
+        font-size: 14px;
+        font-weight: 700;
+        color: $primary-blue;
+      }
+
+      input,
+      textarea {
+        padding: 15px;
+        background: $bg-light;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        font-family: inherit;
+        font-size: 15px;
+        outline: none;
+        transition: border-color 0.3s;
+
+        &:focus {
+          border-color: $accent-orange;
+        }
+      }
+    }
+  }
+}
+
+// ==========================================
+// --- RESPONSIVE MOBILE ---
+// ==========================================
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 0;
+  }
+}
