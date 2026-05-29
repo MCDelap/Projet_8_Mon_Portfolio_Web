@@ -8,7 +8,9 @@ function Footer() {
     <footer className="footer">
       <div className="footer__container">
         <p className="footer__copyright">
-          © {currentYear} Marie-Claire Delaplanche — Tous droits réservés.
+          © {currentYear} Marie-Claire Delaplanche
+          <br />
+          Tous droits réservés.
         </p>
 
         <div className="footer__socials">
