@@ -1,0 +1,74 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.about {
+  padding: 100px 0;
+  background-color: $bg-light;
+  color: $primary-blue;
+
+  &__container {
+    @include container-main;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    max-width: 900px;
+  }
+
+  &__pitch {
+    @include section-description;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__card {
+    @include card-base;
+    flex: 1 1 250px;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    }
+
+    .icon-wrapper {
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: $primary-blue;
+    }
+
+    p {
+      font-size: 16px;
+      opacity: 0.7;
+    }
+  }
+
+  // ==========================================
+  // --- RESPONSIVE MOBILE ---
+  // ==========================================
+  @media (max-width: 768px) {
+    padding: 60px 0;
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__grid {
+      gap: 20px;
+    }
+
+    &__card {
+      padding: 30px 20px;
+    }
+  }
+}
