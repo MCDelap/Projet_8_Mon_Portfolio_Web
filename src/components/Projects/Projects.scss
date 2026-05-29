@@ -1,0 +1,142 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.projects {
+  padding: 100px 0;
+  background-color: $bg-light;
+
+  &__container {
+    @include container-main;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__description {
+    @include section-description;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.project-card {
+  @include card-base;
+  padding: 0;
+  flex: 1 1 340px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &__banner {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    h3 {
+      font-size: 50px;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: 2px;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .kasa-theme {
+    background-color: $accent-orange;
+  }
+
+  .nina-theme {
+    background-color: $primary-blue;
+  }
+
+  // --- CONTENU TEXTUEL ---
+  &__content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .project-card__category {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $accent-orange;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    h4.project-card__name {
+      font-size: 24px;
+      color: $primary-blue;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .project-card__text {
+      font-size: 16px;
+      opacity: 0.7;
+    }
+  }
+
+  // --- LES TAGS (BADGES) ---
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  // --- LES LIENS EN BAS ---
+  &__links {
+    margin-top: auto;
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+
+    .project-link {
+      background: none;
+      border: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: $primary-blue;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: $accent-orange;
+      }
+    }
+  }
+}
+// ==========================================
+// --- RESPONSIVE MOBILE ---
+// ==========================================
+@media (max-width: 768px) {
+  .projects {
+    padding: 60px 0;
+  }
+
+  .project-card {
+    &__banner {
+      height: 180px;
+
+      h3 {
+        font-size: 36px;
+      }
+    }
+  }
+}
