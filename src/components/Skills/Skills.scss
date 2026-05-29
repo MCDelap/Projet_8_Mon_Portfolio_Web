@@ -1,0 +1,90 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.skills {
+  padding: 100px 0;
+  background-color: $bg-dark;
+  color: $primary-blue;
+
+  &__container {
+    @include container-main;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    @include section-description;
+    color: $text-dark;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.skill-card {
+  @include card-base;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 250px;
+  min-height: 180px;
+  padding: 30px;
+  border-top: 9px solid transparent;
+  transition:
+    border-color 0.3s ease,
+    border-top 0.3s ease;
+  &:hover {
+    border-color: $accent-orange;
+    border-top: 10px solid $accent-orange;
+  }
+
+  &__level {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $accent-orange;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 15px;
+
+    h3 {
+      font-size: 18px;
+      margin: 0;
+    }
+  }
+
+  &__icon {
+    font-size: 40px;
+    color: $accent-orange;
+    display: block;
+  }
+}
+
+// ==========================================
+// --- RESPONSIVE MOBILE ---
+// ==========================================
+@media (max-width: 768px) {
+  .skills {
+    padding: 60px 0;
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__grid {
+      gap: 20px;
+    }
+  }
+}
