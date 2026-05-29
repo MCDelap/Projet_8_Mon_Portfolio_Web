@@ -1,0 +1,52 @@
+@use "variables" as *;
+
+// Centrage du contenu
+@mixin container-main {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+// Alignement flexible (horizontal et vertical)
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Style de base pour les boutons
+@mixin button-base {
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Style de base utilisable pour les cartes
+@mixin card-base {
+  background: $white;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+}
+
+// Description de section
+@mixin section-description {
+  font-family: $font-body;
+  font-size: 18px;
+  opacity: 0.8;
+  max-width: 900px;
+  margin-bottom: 60px;
+  line-height: 1.6;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+}
