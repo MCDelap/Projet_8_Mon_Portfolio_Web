@@ -1,16 +1,59 @@
-# React + Vite
+Portfolio - M-Claire Delaplanche
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://projet-8-mon-portfolio-web.vercel.app/
 
-Currently, two official plugins are available:
+Une sélection de mes projets récents, illustrant une approche centrée sur l'expérience utilisateur, l'accessibilité et la performance technique.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🎯 Objectifs du projet
+Ce portfolio a été conçu pour présenter mes compétences en développement front-end. L'accent a été mis sur :
 
-## React Compiler
+La performance : Optimisation poussée pour garantir des scores Lighthouse exemplaires.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Le SEO : Mise en place d'un balisage sémantique rigoureux et configuration du robots.txt.
 
-## Expanding the ESLint configuration
+Le Design : Intégration d'une charte graphique personnalisée via une architecture Sass modulaire.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🛠 Technologies utilisées
+Frontend : React 19
+
+Styling : Sass (SCSS) avec architecture par composants
+
+Icônes : React-icons
+
+Données : JSON dynamique pour la gestion des projets
+
+🚀 Performance (Lighthouse)
+Le projet respecte les meilleures pratiques du web avec des scores constants en zone verte :
+
+Performance : ~98%
+
+Accessibilité : 100%
+
+Best Practices : 100%
+
+SEO : 100%
+
+📂 Structure du projet
+Plaintext
+src/
+├── components/ # Composants React réutilisables
+├── data/ # Fichiers JSON (projets, compétences)
+├── styles/ # Fichiers SCSS (variables, mixins, global)
+└── assets/ # Images et logos
+public/
+└── robots.txt # Configuration pour l'indexation SEO
+⚙️ Installation
+Cloner le dépôt
+
+Bash
+git clone https://github.com/MCDelap/Projet_8_Mon_Portfolio_Web.git
+Installer les dépendances
+
+Bash
+npm install
+Lancer le serveur de développement
+
+Bash
+npm run dev
+📧 Contact
+Lien du dépôt : [Projet_8_Mon_Portfolio_Web](https://github.com/MCDelap/Projet_8_Mon_Portfolio_Web)
